@@ -12,7 +12,7 @@
     </a>
     <img alt="Repository size" src="https://img.shields.io/github/repo-size/efernandes-tech/ruby-001-ef-to-do-list">
     <a href="https://edersonfernandes.com.br">
-        <img alt="made by @efernandes-tech" src="https://img.shields.io/badge/Made%20by-@efernandes-tech-%2360F6AD">
+        <img alt="made by @efernandes-tech" src="https://img.shields.io/badge/Made_by-@efernandes%E2%80%93tech-blue">
     </a>
 </p>
 
