@@ -1,6 +1,19 @@
+require 'json'
+
 class ToDoList
-  def initialize
-    @tasks = []
+  def initialize(filename = 'tasks.json')
+    @filename = filename
+    @tasks = load_tasks
+  end
+
+  def save_tasks
+    File.write(@filename, JSON.generate(@tasks))
+  end
+
+  def load_tasks
+    return [] unless File.exist?(@filename)
+    JSON.parse(File.read(@filename), symbolize_names: true)
+      rescue JSON::ParserError[]
   end
 
   def add_task(description)
@@ -11,6 +24,7 @@ class ToDoList
     }
     @tasks << task
     puts "Task added: #{description}"
+    save_tasks
   end
 
   def list_tasks
@@ -34,6 +48,7 @@ class ToDoList
     else
       puts "Task not found!"
     end
+    save_tasks
   end
 
   def delete_task(id)
@@ -44,6 +59,7 @@ class ToDoList
     else
       puts "Task not found!"
     end
+    save_tasks
   end
 end
 

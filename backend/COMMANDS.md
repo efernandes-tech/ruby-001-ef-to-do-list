@@ -21,7 +21,8 @@ ruby greeting.rb
 ```
 
 ```cmd
-
+cd ./backend
+ruby to_do_list.rb
 ```
 
 ```cmd
