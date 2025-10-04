@@ -1,23 +1,23 @@
 <h1 align="center">
-    <a href="#" alt="Project Name">Project Name</a>
+    <a href="#" alt="Ruby To Do List">Ruby To Do List</a>
 </h1>
 
 <h3 align="center">
-    Brief description of your project
+    A simple command-line to-do list application built with Ruby
 </h3>
 
 <p align="center">
-    <a href="https://github.com/efernandes-tech/scaffolds/commits/main">
-        <img alt="GitHub last commit" src="https://img.shields.io/github/last-commit/efernandes-tech/scaffolds">
+    <a href="https://github.com/efernandes-tech/ruby-001-ef-to-do-list/commits/main">
+        <img alt="GitHub last commit" src="https://img.shields.io/github/last-commit/efernandes-tech/ruby-001-ef-to-do-list">
     </a>
-    <img alt="Repository size" src="https://img.shields.io/github/repo-size/efernandes-tech/scaffolds">
+    <img alt="Repository size" src="https://img.shields.io/github/repo-size/efernandes-tech/ruby-001-ef-to-do-list">
     <a href="https://edersonfernandes.com.br">
         <img alt="made by @efernandes-tech" src="https://img.shields.io/badge/Made%20by-@efernandes-tech-%2360F6AD">
     </a>
 </p>
 
 <h4 align="center">
-    Status: In progress | Finished
+    Status: Finished
 </h4>
 
 <p align="center">
@@ -30,15 +30,18 @@
 
 ## About
 
-Description about your project and what it does.
+A command-line to-do list application written in Ruby that allows you to manage your tasks efficiently. The application supports adding, listing, completing, and deleting tasks with persistent storage using JSON.
 
 ---
 
 ## Features
 
--   [x] Feature One
--   [x] Feature Two
--   [ ] Feature Three (in progress)
+-   [x] Add new tasks
+-   [x] List all tasks with completion status
+-   [x] Mark tasks as completed
+-   [x] Delete tasks
+-   [x] JSON persistence for data storage
+-   [x] RSpec test suite
 
 ---
 
@@ -47,55 +50,56 @@ Description about your project and what it does.
 ### Pre-requisites
 
 Before you begin, you will need to have the following tools installed:
-[Git](https://git-scm.com), [Node.js](https://nodejs.org/en/).
+[Git](https://git-scm.com), [Ruby](https://www.ruby-lang.org/) (3.0 or higher recommended).
 
 #### Running the project
 
 ```bash
 # Clone this repository
-git clone https://github.com/efernandes-tech/scaffolds.git
+git clone https://github.com/efernandes-tech/ruby-001-ef-to-do-list.git
 
-# Access the project folder
-cd scaffolds
-
-# Install dependencies
-npm install
+# Access the backend folder
+cd ruby-001-ef-to-do-list/backend
 
 # Run the application
-npm start
+ruby to_do_list.rb
+```
 
-# The server will start at port: 3000 - go to http://localhost:3000
+#### Running the tests
+
+```bash
+# Install RSpec if not already installed
+gem install rspec
+
+# Run the tests
+rspec to_do_list_spec.rb
 ```
 
 ---
 
 ## Tech Stack
 
-**Frontend:**
+**Language:**
 
--   [React](https://reactjs.org/)
--   [TypeScript](https://www.typescriptlang.org/)
--   [Tailwind CSS](https://tailwindcss.com/)
+-   [Ruby](https://www.ruby-lang.org/)
 
-**Backend:**
+**Libraries:**
 
--   [Node.js](https://nodejs.org/)
--   [Express](https://expressjs.com/)
--   [MongoDB](https://www.mongodb.com/)
+-   JSON (built-in for data persistence)
+-   [RSpec](https://rspec.info/) (for testing)
 
 **Tools:**
 
 -   [Visual Studio Code](https://code.visualstudio.com/)
--   [Postman](https://www.postman.com/)
 
 ---
 
 ## Author
 
 <a href="https://github.com/efernandes-tech">
-    <img style="border-radius: 50%;" src="https://github.com/efernandes-tech.png" width="100px;" alt="Your Name" />
+    <img style="border-radius: 50%;" src="https://github.com/efernandes-tech.png" width="100px;" alt="Ederson Fernandes" />
     <br />
-    <sub><b>Your Name</b></sub>
+    <sub><b>Ederson Fernandes</b></sub>
 </a>
 
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-Connect-blue?logo=linkedin)](https://www.linkedin.com/in/efernandes-tech)
