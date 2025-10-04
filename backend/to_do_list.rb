@@ -13,7 +13,8 @@ class ToDoList
   def load_tasks
     return [] unless File.exist?(@filename)
     JSON.parse(File.read(@filename), symbolize_names: true)
-      rescue JSON::ParserError[]
+      rescue JSON::ParserError
+        []
   end
 
   def add_task(description)
