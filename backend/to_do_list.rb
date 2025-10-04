@@ -46,3 +46,42 @@ class ToDoList
     end
   end
 end
+
+def show_menu
+  puts "\n=== Ruby To Do List ==="
+  puts "1. Add task"
+  puts "2. List tasks"
+  puts "3. Complete task"
+  puts "4. Delete task"
+  puts "5. Exit"
+  print "\nChoose an option: "
+end
+
+todo_list = ToDoList.new
+
+loop do
+  show_menu
+  choice = gets.chomp.to_i
+
+  case choice
+  when 1
+    print "Task description: "
+    description = gets.chomp
+    todo_list.add_task(description)
+  when 2
+    todo_list.list_tasks
+  when 3
+    print "Task ID to complete: "
+    id = gets.chomp.to_i
+    todo_list.complete_task(id)
+  when 4
+    print "Task ID to delete: "
+    id = gets.chomp.to_i
+    todo_list.delete_task(id)
+  when 5
+    puts "Goodbye!"
+    break
+  else
+    puts "Invalid option!"
+  end
+end
