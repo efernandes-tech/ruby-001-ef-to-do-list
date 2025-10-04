@@ -25,4 +25,24 @@ class ToDoList
       puts "#{task[:id]}. #{status} #{task[:description]}"
     end
   end
+
+  def complete_task(id)
+    task = @tasks.find { |t| t[:id] == id }
+    if task
+      task[:completed] = true
+      puts "Completed: #{task[:description]}"
+    else
+      puts "Task not found!"
+    end
+  end
+
+  def delete_task(id)
+    task = @tasks.find { |t| t[:id] == id }
+    if task
+      @tasks.delete(task)
+      puts "Deleted: #{task[:description]}"
+    else
+      puts "Task not found!"
+    end
+  end
 end
